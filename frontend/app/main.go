@@ -15,7 +15,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "<h1>Radix app</h1>")
 	count, _ := env.GetInt("COUNT", 1200)
 	for i := 0; i < count; i++ {
-		totalCount += i
+		totalCount += 1
 		log.Infof("Log line #%d ABCDEFGHIKLMNOPQRSTVXYZ ABCDEFGHIKLMNOPQRSTVXYZ ABCDEFGHIKLMNOPQRSTVXYZ ABCDEFGHIKLMNOPQRSTVXYZ ABCDEFGHIKLMNOPQRSTVXYZ ABCDEFGHIKLMNOPQRSTVXYZ ABCDEFGHIKLMNOPQRSTVXYZ",
 			totalCount)
 	}
