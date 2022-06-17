@@ -1,7 +1,7 @@
 apiVersion: radix.equinor.com/v1
 kind: RadixApplication
 metadata:
-  name: radix-sub-pipeline-example
+  name: radix-app-with-large-log
 spec:
   environments:
     - name: dev
