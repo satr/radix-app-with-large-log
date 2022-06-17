@@ -9,13 +9,15 @@ import (
 )
 
 var envVars = map[string]bool{"CONNECTION_STRING": true, "DB_USER": true, "DB_PASS": true, "DB_QA_USER": true}
+var totalCount int = 0
 
 func handler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "<h1>Radix app</h1>")
 	count, _ := env.GetInt("COUNT", 1200)
 	for i := 0; i < count; i++ {
-		log.Infof("Log line #%d klajsh lfakjsdhlfkja hsdlkfj halskdj hflkasdh flkjashdlfkj haslkdjfh laks dhflkjashdlfkj haslkjdf hlakjsdfh",
-			i)
+		totalCount += i
+		log.Infof("Log line #%d ABCDEFGHIKLMNOPQRSTVXYZ ABCDEFGHIKLMNOPQRSTVXYZ ABCDEFGHIKLMNOPQRSTVXYZ ABCDEFGHIKLMNOPQRSTVXYZ ABCDEFGHIKLMNOPQRSTVXYZ ABCDEFGHIKLMNOPQRSTVXYZ ABCDEFGHIKLMNOPQRSTVXYZ",
+			totalCount)
 	}
 }
 
